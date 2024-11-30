@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Localized Titles for Twitch",
+    "description": "Localizes stream title timestamps",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_icon": "images/hello_extensions.png"
+    },
+    "content_scripts": [
+      {
+        "js": ["scripts/localizer.js", "scripts/content.js"],
+        "matches": [
+          "https://www.twitch.tv/*",
+          "https://developer.chrome.com/docs/extensions/*",
+          "https://developer.chrome.com/docs/webstore/*"
+        ]
+      }
+    ]
+  }
